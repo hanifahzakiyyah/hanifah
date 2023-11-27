@@ -1,0 +1,270 @@
+<style>
+    *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    }
+
+    html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    overflow-y: scroll;
+    }
+    
+    body{
+        background-color: rgb(255, 249, 195);
+
+    }
+    
+    .navbar{
+        position: fixed;
+        background-color: rgb(179, 134, 64);
+        color: white;
+        top: 0; left: 0; right: 0;
+        height: 7rem;
+        z-index: 12;
+    }
+    nav {
+        display: flex;
+        justify-content: center;
+        padding: 70px 10px 30px;
+        background-color: rgb(179, 134, 64);
+        position: fixed;
+        right: 0;left: 0;
+        text-align: left;
+        z-index: 1;
+        border-radius: 0 0 1rem 1rem;
+        box-shadow: 0.3rem 0.3rem 0.6rem rgb(255, 252, 226), -0.2rem -0.2rem 0.5rem rgb(218, 195, 148);
+        transition: 1s;
+        transform: translateY(-500px);
+        
+        /* flex-direction: row;
+        
+        align-items: center; */
+    }
+    nav ul.kumpulan {
+        box-shadow: 0.3rem 0.3rem 0.6rem rgb(148, 103, 32), -0.2rem -0.2rem 0.5rem rgb(211, 166, 93);
+        margin-top: 10px;
+        padding: 10px;
+        margin: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        flex-wrap: wrap;
+        width: max-content;
+        /* height: 250px; */
+        border-radius: 1rem;
+    }
+    
+    nav ul li{
+        list-style: none;
+    }
+    nav ul li a {
+        text-decoration: none;
+        font-size: 1.5rem;
+        color: beige;
+        font-family: comfortaa, arial;
+        /* background-color: #fff; */
+        padding: 7px 10px;
+        border-radius: 1rem;
+        box-shadow: 0.3rem 0.3rem 0.6rem rgb(148, 103, 32), -0.2rem -0.2rem 0.5rem rgb(211, 166, 93);  
+    }
+    nav ul li a:active{
+            box-shadow: inset 0.2rem 0.2rem 0.5rem rgb(148, 103, 32), inset -0.2rem -0.2rem 0.5rem rgb(211, 166, 93);
+        }
+    .nav-item {
+        width : calc( max-content);
+        margin: 15px;
+    }
+        
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            height: 42px;
+            width: 42px;
+            justify-content: space-evenly;
+            position: fixed;
+            align-items: center;
+            top: 1.5rem;
+            right: 1.5rem;
+            z-index: 20;
+            cursor: pointer;
+            box-shadow: 0.3rem 0.3rem 0.6rem rgb(148, 103, 32), -0.2rem -0.2rem 0.5rem rgb(211, 166, 93);  
+            border-radius: 1rem; 
+            padding: 3px;         
+        } 
+        .hamburger:active{
+            box-shadow: inset 0.2rem 0.2rem 0.5rem rgb(148, 103, 32), inset -0.2rem -0.2rem 0.5rem rgb(211, 166, 93);
+        }
+        .hamburger span.span {
+            background-color: #fff;
+            width: 28px;
+            height: 1rem;
+            transition: .3s;
+        }
+        .turun {transform: rotate(45deg) translateY(8px) translateX(8px);}
+        .naik {transform: rotate(-45deg) translateY(-8px) translateX(8px);}
+        .hilang {opacity: 0;}
+        nav.togel {
+            transform: translateY(0);
+        }
+        .aktif {
+        box-shadow: inset 0.2rem 0.2rem 0.5rem rgb(148, 103, 32), inset -0.2rem -0.2rem 0.5rem rgb(211, 166, 93);
+    }
+    
+    select {
+        border: none;
+        outline: none;
+        font-family: comfortaa;
+        position: absolute;
+        top: 1.5rem; left: 1.5rem; right: 5px;
+    }
+    option{
+        border: none;
+        outline: none;
+    }
+    select:hover {
+        border: none;
+        outline: none;
+    }
+    .btn {
+        /* width: 9rem; */
+        height: 4rem;
+        border-radius: 1rem;
+        box-shadow: 0.3rem 0.3rem 0.6rem rgb(148, 103, 32), -0.2rem -0.2rem 0.5rem rgb(211, 166, 93);
+        cursor: pointer;
+        transition: 0.3s ease;
+        padding: 10px 15px;
+        z-index: 10;
+        background-color: rgb(179, 134, 64);
+    }
+    .btn__secondary {
+        color: beige;
+    }
+    .btn__secondary:hover {
+        color: white;
+    }
+    .btn__secondary:active {
+        box-shadow: inset 0.2rem 0.2rem 0.5rem rgb(148, 103, 32), inset -0.2rem -0.2rem 0.5rem rgb(211, 166, 93);
+    }
+    
+
+    @media screen and (max-width: 600px) {
+        
+    }
+</style>
+
+
+
+<div class="navbar">
+    <div class="hamburger">
+        <span style="display: block; width: 28px; height: 3px; background-color: rgb(247, 240, 228); transition: .5s;"></span>
+        <span style="display: block; width: 28px; height: 3px; background-color: rgb(247, 240, 228);transition: .5s;"></span>
+        <span style="display: block; width: 28px; height: 3px; background-color: rgb(247, 240, 228);transition: .5s;"></span>
+    </div>
+        
+    <select class="btn btn__secondary" >
+        <option value="ind">🏳️  indonesia</option>
+        <option value="eng">🏳️  english</option>
+    </select>
+</div>
+        <nav >
+            <ul class="kumpulan">
+               
+                        <li class="nav-item">
+                            <a class="nav-link" href="#madi">  🔥  Fi'il Madhi</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="#amr">  🔥 Fi'il Amr</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#nahi">  🔥 Fi'il Nahiy</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#mudore">  🔥  Fi'il Mudhori'</a>
+                            </li>
+                            
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="#fail">  🔥 Isim Fa'il</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#masdar">  🔥 Isim Masdar</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#makan">  🔥 Isim Makan / Zaman</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#alat">  🔥 Isim Alat</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#maful">  🔥 Isim Maf'ul</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#mamaj">  🔥 Fi'il Madhi Majhul</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#mumaj">  🔥 Fi'il Mudhori Majhul</a>
+                            </li>
+                            
+            </ul>
+              
+        </nav>
+              
+              
+          
+              
+              
+              
+             
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+const hamburger = document.querySelector('.hamburger');
+const navul = document.querySelector('nav');
+const span = hamburger.children;
+const menu = document.querySelectorAll("nav ul li")
+const menu1 = document.querySelectorAll("nav ul li a")
+
+hamburger.addEventListener('click', function() {
+    navul.classList.toggle('togel');
+    span[0].classList.toggle('turun');
+    span[1].classList.toggle('hilang');
+    span[2].classList.toggle('naik');
+});
+
+for (let i = 0; i< menu.length; i++) {
+    menu[i].addEventListener("click", ()=>{
+        navul.classList.toggle('togel');
+        span[0].classList.toggle('turun');
+        span[1].classList.toggle('hilang');
+        span[2].classList.toggle('naik');
+    })
+}
+
+    for (let i = 0; i< menu1.length; i++) {
+        menu1[i].addEventListener("click", ()=>{
+            for (let j = 0; j< menu1.length; j++) {
+              menu1[j].classList.remove("aktif")
+            }
+            menu1[i].classList.add("aktif");
+        })
+    }
+
+
+    </script>

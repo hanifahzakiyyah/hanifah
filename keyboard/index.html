@@ -1,0 +1,336 @@
+<style>
+    html {
+        font-size: 62.5%;
+    }
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    .container {
+  width:98%;
+  max-width:730px;
+  padding: 1px 0px 10px 10px;
+  border-radius: 10px;
+  margin: auto;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+ul.keyboard {
+  list-style-type: none;
+  font-family: lateef;
+  /* background-color: rgb(231, 226, 177); */
+  /* box-shadow: 0.3rem 0.3rem 0.6rem rgb(202, 195, 130), -0.2rem -0.2rem 0.5rem rgb(255, 249, 197); */
+  border-radius: 5px;
+  padding: 0;
+  width: 95%;
+  max-width: 720px;
+  max-height: 279px;
+  min-height: 150px;
+  height: 40vw;
+}
+
+.keyboard li {
+  cursor: pointer;
+  display: inline;
+  float: left;
+  height: 18%;
+  margin: auto;
+  line-height: 130%;
+  padding: 0;
+  margin: 0.3% 0.6% 0.6% 0.2%;
+  background-color: rgb(231, 226, 177);
+color: rgb(148, 103, 32);
+  box-shadow: 0.3rem 0.3rem 0.6rem rgb(202, 195, 130), -0.2rem -0.2rem 0.5rem rgb(255, 249, 197);
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 2.5rem;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.char {
+    width: 5.75%;
+    /* -webkit-transition: background-color 100ms; */
+}
+
+.tab {
+  width: 14%;
+}
+
+.at {
+  width: 7.2%;
+}
+
+.last {
+  margin-right: 0%;
+}
+
+.backspace {
+  width: 14%;
+}
+
+.capslock {
+  width: 12%
+}
+
+.capslock.on {
+  background-color: #aaa;
+}
+
+.return {
+  width: 14%;
+}
+
+.shift {
+  width: 7.2%;
+}
+
+.last {
+  margin-right: 0;
+}
+
+.space {
+  width: 99%;
+}
+
+.keyboard .touch {
+  background-color: rgb(255, 252, 220);
+}
+
+/****************************/
+
+/* .form {
+  position: absolute;
+  top: 10px;
+  left: 760px; 
+} */
+.form{
+  width: 89%;
+  margin: auto;
+  display: flex;
+  position: relative;
+  width: max-content;
+}
+
+input {
+  width: 90vw;
+  margin: auto;
+  max-width:730px;
+  height: 70px;
+  border: none;
+  background-color: rgb(231, 226, 177);
+  box-shadow: inset 0.2rem 0.2rem 0.5rem rgb(202, 195, 130), inset -0.2rem -0.2rem 0.5rem rgb(255, 249, 197);
+  max-width: 720px;
+  color: rgb(148, 103, 32);
+}
+
+
+input:focus,textarea:focus {
+   outline: none;
+   border: none;
+}
+
+input,textarea {
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  font-family: lateef;
+  font-size: 2.5rem;
+  direction: rtl;
+}
+button[type="button"] {
+  padding: 10px 15px;
+  height: max-content;
+  font-size: 1.5rem;
+  border: none;
+  background-color:rgb(231, 226, 177);
+  box-shadow: 0.3rem 0.3rem 0.6rem rgb(202, 195, 130), -0.2rem -0.2rem 0.5rem rgb(255, 249, 197);
+  border-radius: 1rem;
+  /* margin: 10px ; */
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  color: rgb(148, 103, 32);
+  cursor: pointer;
+}
+button:active {
+  box-shadow: inset 0.3rem 0.3rem 0.6rem rgb(202, 195, 130), inset -0.2rem -0.2rem 0.5rem rgb(255, 249, 197);
+}
+.form span{
+  position: absolute;
+  top: 25px;
+  left: 80px;
+  font-size: 1.5rem;
+  color: rgb(148, 103, 32);
+  background-color: antiquewhite;
+  display: none;
+  transition: 1s;
+}
+.keyboard li.harokat{
+    font-size: 3.5rem;
+    line-height: 160%;
+}
+.keyboard li.harokat.atas{
+    line-height: 70%;
+}
+/* .focus {
+  border: solid 2px #333;
+} */
+</style>
+<div class="form">
+  <button type="button" onclick="copytext()">Copy</button>
+  <input type="text" tabIndex="1" id="pilih"></input type="text"><br>
+  <span>copied ✔️</span>  
+</div>
+
+<div class="container">
+    <ul class="keyboard">
+      <li class="char">'</li>
+      <li class="char harokat">َ</li>
+      <li class="char harokat">ً</li>
+      <li class="char harokat">ُ</li>
+      <li class="char harokat">ٌ</li>
+      <li class="char harokat atas">ِ</li>
+      <li class="char harokat atas">ٍ</li>
+      <li class="char harokat">ْ</li>
+      <li class="char harokat">ّ</li>
+      <li class="char">.</li>
+      <li class="char">,</li>
+      <li class="char">-</li>
+      <li class="char">_</li>
+      <li class="backspace last">backsp</li>
+      <li class="tab"></li>
+      <li class="char">ض</li>
+      <li class="char">ص</li>
+      <li class="char">ث</li>
+      <li class="char">ق</li>
+      <li class="char">ف</li>
+      <li class="char">غ</li>
+      <li class="char">ع</li>
+      <li class="char">ه</li>
+      <li class="char">خ</li>
+      <li class="char">ح</li>
+      <li class="char">ج</li>
+      <li class="char">د</li>
+      <li class="char">ذ</li>
+      <li class="capslock"></li>
+      <li class="char">ش</li>
+      <li class="char">س</li>
+      <li class="char">ي</li>
+      <li class="char">ب</li>
+      <li class="char">ل</li>
+      <li class="char">ا</li>
+      <li class="char">ت</li>
+      <li class="char">ن</li>
+      <li class="char">م</li>
+      <li class="char">ك</li>
+      <li class="char">ط</li>
+      <li class="return last">Enter</li>
+      <li class="char at">أ</li>
+      <li class="char">إ</li>
+      <li class="char">ئ</li>
+      <li class="char">ء</li>
+      <li class="char">ؤ</li>
+      <li class="char">ر</li>
+      <li class="char">لا</li>
+      <li class="char">ى</li>
+      <li class="char">ة</li>
+      <li class="char">و</li>
+      <li class="char">ز</li>
+      <li class="char">ظ</li>
+      <li class="char">آ</li>
+      <li class="char">؟</li>
+      <li class="char">"</li> 
+      <li class="space">space</li>
+    </ul>
+    </div>
+    
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+    function copytext() {
+        document.getElementById("pilih").select();
+        document.execCommand("copy");
+    }
+
+        $(function() {
+  
+  // $('textarea').focus();
+   
+   var $caps = $('.capslock'),
+       $char = $('.char');
+   
+   
+   $('li').click(function() {
+     var t = this;
+      $(this).addClass('touch');
+      setTimeout(function() {
+        $(t).removeClass('touch');
+      },100);
+   });
+   
+   var lastFocus,
+       selectionStart,
+       selectionEnd;
+ 
+   $('textarea,input').on('focus', function() {
+     $('textarea,input').removeClass('focus');
+     $(this).addClass('focus');
+   });
+   
+   $('textarea,input').on('blur', function() {
+     lastFocus = this;
+     selStart = this.selectionStart;
+     selEnd = this.selectionEnd;
+   });
+   
+   $('.char').click(function() {
+     var char = $(this).text();
+     sendChar(char);
+   });
+   
+   $('.return').click(function() {
+     sendChar('\n');
+   });
+   
+   $('.space').click(function() {
+     sendChar(' ');
+   });
+   
+   $('.backspace').click(function() {
+     backspace();
+   });
+   
+   
+   function backspace() {
+      var orig = $(lastFocus).val();
+      var updated = orig.substring(0, selStart-1) + orig.substring(selEnd, orig.length);
+      $(lastFocus).val(updated);
+      selEnd = --selStart;
+      $(lastFocus).focus();
+      lastFocus.selectionStart = selStart;
+      lastFocus.selectionEnd = selEnd;
+   }
+   
+   function sendChar(char) {
+     var orig = $(lastFocus).val();
+     var updated =  orig.substring(0, selStart) + char + orig.substring(selEnd, orig.lenght);
+     $(lastFocus).val(updated);
+     selEnd=++selStart;
+     $(lastFocus).focus();
+     lastFocus.selectionStart = selStart;
+     lastFocus.selectionEnd = selEnd;
+   };
+   
+ });
+    </script>
